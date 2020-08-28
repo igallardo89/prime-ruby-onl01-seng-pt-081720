@@ -13,5 +13,5 @@ def lab(x)
 end
 
 def prime?(num)
-  lsb(num).include?(num)
+  lab(num).include?(num)
 end
