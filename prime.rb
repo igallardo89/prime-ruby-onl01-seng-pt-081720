@@ -1,4 +1,4 @@
-def sieve(max)
+def sieve(x)
   primes = (0..x).to_a
   primes[0] = primes[1] = nil
   counter = 0
