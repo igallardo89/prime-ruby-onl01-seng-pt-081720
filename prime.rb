@@ -1,9 +1,9 @@
 
 def check_prime? (num)
-  prime=true
+  prime=false
  [2,3,5].each do |init|
    if (num%init==0 && num!= init)
-   return false
+   return true
    end
  end
 prime
