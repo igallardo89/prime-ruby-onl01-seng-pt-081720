@@ -1,4 +1,4 @@
-def sieve(x)
+def lab(x)
   primes = (0..x).to_a
   primes[0] = primes[1] = nil
   counter = 0
@@ -13,5 +13,5 @@ def sieve(x)
 end
 
 def prime?(num)
-  sieve(num).include?(num)
+  lsb(num).include?(num)
 end
