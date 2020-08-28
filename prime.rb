@@ -1,16 +1,10 @@
-def is_prime?(num)
-  (2.Math.sqrt(num)).each do |i|
-    return false if num % i == 0
-  end
-  true
-end
+def IsPrime(num):
+  for i in range (2,num):
+    if (num%i) == 0:
+      return False
+  return True
 
-def prime_nth(num)
-  prime_array = []
-  current_num = 2
-  while prime_array.size < num
-    prime_array << current_num if is_prime?(current_num)
-    current_num += 1
-  end
-  prime_array.last
-end
+for i in range(1,20):
+	if IsPrime(i + 1):
+			print(i+1,end=" ")
+print()
