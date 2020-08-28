@@ -1,10 +1,22 @@
-def IsPrime(num):
-  for i in range (2,num):
-    if (num%i) == 0:
-      return False
-  return True
+def sieve(max)
+  primes = (0..max).to_a
 
-for i in range(1,20):
-	if IsPrime(i + 1):
-			print(i+1,end=" ")
-print()
+  primes[0] = primes[1] = nil
+
+  counter = 0
+  primes.each do |p|
+    next unless p
+
+    break if p*p > max
+    counter += 1
+    (p*p).step(max,p) { |m| primes[m] = nil }
+  end
+
+  # Finally, return the compacted array.
+  puts "Solved for #{max} in #{counter} steps."
+  primes.compact
+end
+
+def prime?(num)
+  sieve(num).include?(num)
+end
