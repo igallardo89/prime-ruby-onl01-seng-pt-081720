@@ -1,16 +1,16 @@
-
-def check_prime? (num)
-  prime=false
- [2,3,5].each do |init|
-   if (num%init==0 && num!= init)
-   return true
-   end
- end
-prime
+def is_prime?(num)
+  (2.Math.sqrt(num)).each do |i|
+    return false if num % i == 0
+  end
+  true
 end
 
-def get_primes (num)
-  (1..num).select {|i| check_prime?(i)}
+def prime_nth(num)
+  prime_array = []
+  current_num = 2
+  while prime_array.size < num
+    prime_array << current_num if is_prime?(current_num)
+    current_num += 1
+  end
+  prime_array.last
 end
-
-p get_primes(100)
